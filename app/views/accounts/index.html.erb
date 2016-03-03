@@ -28,8 +28,9 @@
 
 <p>Your balance is $<%= Account.display_balance  %>.</p>
 <p>You've made <%= Account.num_of_transactions %> transactions.</p>
-<p>In the last month, you made $<%= Account.spending_this_month %> worth of transactions. </p>
-
+<p>This month, you've made $<%= Account.spending_this_month %> worth of transactions. </p>
+<p>Last month, you made $<%= Account.spending_last_month %> worth of transactions. </p>
+<p>This month, you've made <%= Account.this_month_transactions %> transactions. </p>
 
 
 
