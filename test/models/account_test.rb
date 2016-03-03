@@ -13,4 +13,11 @@ class AccountTest < ActiveSupport::TestCase
   test "should display total number of transactions" do
     assert_equal 2, Account.num_of_transactions
   end
+
+  test "should display transactions this month" do
+    assert_equal 7.0, Account.spending_this_month
+  end
+
+
+
 end
