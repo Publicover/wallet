@@ -16,8 +16,11 @@ class Account < ActiveRecord::Base
     criteria = self.all.select {|x| (x.created_at.mon - Time.now.mon) == 0}
     criteria.reduce(0.0) {|x, y| x + y.amount }
   end
-    # y
-  # end
+
+  def self.spending_last_month
+    criteria = self.all.select {|x| (x.created_at.mon - Time.now.mon) == -1}
+    criteria.reduce(0.0) {|x, y| x + y.amount }
+  end
 
 
 

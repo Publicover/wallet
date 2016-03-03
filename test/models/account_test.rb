@@ -18,6 +18,8 @@ class AccountTest < ActiveSupport::TestCase
     assert_equal 7.0, Account.spending_this_month
   end
 
-
+  test "should display transactions last month" do
+    assert_equal 0.00, Account.spending_last_month
+  end
 
 end
