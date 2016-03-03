@@ -26,4 +26,8 @@ class AccountTest < ActiveSupport::TestCase
     assert_equal 2, Account.this_month_transactions
   end
 
+  test "should display number of transactions last month" do
+    assert_equal 0, Account.last_month_transactions
+  end
+
 end

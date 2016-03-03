@@ -27,6 +27,10 @@ class Account < ActiveRecord::Base
     criteria.length
   end
 
+  def self.last_month_transactions
+    criteria = self.all.select {|x| (x.created_at.mon - Time.now.mon) == -1}
+    criteria.length
+  end
 
 
 
