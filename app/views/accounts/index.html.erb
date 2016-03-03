@@ -26,6 +26,11 @@
   </tbody>
 </table>
 
+<p>Your balance is $<%= Account.display_balance  %>.</p>
+<p>You've made <%= Account.num_of_transactions %> transactions.</p>
+
+
+
 <br>
 
 <%= link_to 'New Account', new_account_path %>
